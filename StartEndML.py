@@ -33,8 +33,8 @@ if authentication_status:
     with st.sidebar:
         st.write('Welcome to this website!!')
         st.image("https://www.onepointltd.com/wp-content/uploads/2020/03/inno2.png")
-        st.title("Start to End Machine Learning")
-        choice = st.radio("Navigation", ["Home", "Upload", "EDA", 'Data Cleaning', "Modelling", "Model Interpretation", "Download", "Account"])
+        st.title("AUtoML-ify")
+        choice = st.radio("Navigation", ["Home", "Upload", "EDA", 'Data Cleaning', "Modelling", "Download"])
         st.info("This website helps you build and explore your data.")
     if choice == "Home":
         st.title("Welcome to AutoML-ify: Your Simplified ML Pipeline, Automated!")
