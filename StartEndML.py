@@ -37,16 +37,33 @@ if authentication_status:
         choice = st.radio("Navigation", ["Home", "Upload", "EDA", 'Data Cleaning', "Modelling", "Model Interpretation", "Download", "Account"])
         st.info("This website helps you build and explore your data.")
     if choice == "Home":
-        st.title("Welcome to my Start to End ML Website!")
+        st.title("Welcome to AutoML-ify: Your Simplified ML Pipeline, Automated!")
         st.write("""
-
-My goal is to make the process of analyzing and selecting the best machine learning model for your dataset as easy and efficient as possible. With my website, you can input your dataset and let the system take care of the rest.
-
-My website will automatically clean and preprocess your data, perform exploratory data analysis, and suggest the best machine learning models for your data along with their respective accuracies. This will save you time and effort in the data analysis process and help you make more informed decisions on which model to use for your project.
-
-In the future, I also plan to incorporate explainable AI (XAI) to provide increased transparency and understanding of the model's decision-making process.
-
-Thank you for choosing my Start to End ML Website for your data analysis needs. I hope you find it helpful and user-friendly.""")
+            My goal is to make the process of analyzing and selecting the best machine learning model for your dataset as easy and efficient as possible. With AutoML-ify, you can upload your dataset, and the system will take care of the rest – from data cleaning to model training and visualization.
+            
+            ### **What AutoML-ify Does**
+            - **Automated Data Cleaning**: Handles missing values, outliers, and inconsistencies.
+            - **Smart Preprocessing**: Scales, encodes, and transforms your data for optimal results.
+            - **Exploratory Data Analysis (EDA)**: Generates insightful visualizations to help you understand your data.
+            - **Model Selection & Training**: Automatically selects and trains the best model for your task.
+            - **Visualization & Reporting**: Provides clear, interactive visualizations of model performance and data insights.
+            
+            ### **Why Choose AutoML-ify?**
+            - **Save Time**: Automate repetitive tasks and focus on interpreting results.
+            - **No Expertise Required**: Perfect for users with limited ML knowledge.
+            - **Scalable**: Handles diverse datasets and adapts to various ML tasks.
+            
+            ### **How It Works**
+            1. **Upload Your Dataset**: Provide your dataset in CSV or another supported format.
+            2. **Let AutoML-ify Work**: The pipeline automatically cleans, preprocesses, and analyzes your data.
+            3. **Train Models**: AutoML-ify selects and trains the best model for your task.
+            4. **Explore Results**: Visualize performance metrics, insights, and predictions.
+            
+            ### **Future Plans**
+            In the future, I plan to incorporate **Explainable AI (XAI)** to provide increased transparency and understanding of the model's decision-making process.
+            
+            Thank you for choosing **AutoML-ify** for your data analysis needs. I hope you find it helpful and user-friendly!
+        """)
     if choice == "Upload":
         st.title("Upload Your Dataset")
         file = st.file_uploader("Upload Your Dataset")
