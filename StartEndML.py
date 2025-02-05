@@ -31,7 +31,6 @@ authentication_status = 1
 
 if authentication_status:
     with st.sidebar:
-        st.write('Welcome to this website!!')
         st.image("https://www.onepointltd.com/wp-content/uploads/2020/03/inno2.png")
         st.title("AutoML-ify")
         choice = st.radio("Navigation", ["Home", "Upload", "EDA", 'Data Cleaning', "Modelling", "Download"])
