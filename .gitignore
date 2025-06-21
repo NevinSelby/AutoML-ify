@@ -1,0 +1,21 @@
+# Virtual Environments
+automl/
+trial/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# MLOps artifacts
+models/
+best_model.pkl
+experiment_log.csv
+
+# IDE / Editor specific
+.vscode/
+.idea/
+
+# Streamlit
+.streamlit/ 
