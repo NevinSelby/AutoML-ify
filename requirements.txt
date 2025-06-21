@@ -1,0 +1,11 @@
+matplotlib
+numpy
+pandas
+plotly
+scikit-learn
+streamlit
+ydata-profiling
+xgboost
+shap
+watchdog
+setuptools
