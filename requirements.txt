@@ -1,10 +1,11 @@
 matplotlib
-matplotlib-inline
 numpy
 pandas
 plotly
-seaborn
 scikit-learn
 streamlit
-streamlit-pandas-profiling
+ydata-profiling
 xgboost
+shap
+watchdog
+setuptools
