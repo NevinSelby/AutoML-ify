@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit.components.v1 as components
 import plotly.express as px
 import pandas as pd
 import numpy as np
@@ -95,7 +96,7 @@ elif st.session_state.page == "EDA":
         profile_df = ProfileReport(st.session_state.df, 
                                  title="Exploratory Data Analysis Report",
                                  explorative=True)
-        st.components.v1.html(profile_df.to_html(), width=900, height=1200, scrolling=True)
+        components.html(profile_df.to_html(), width=900, height=1200, scrolling=True)
     else:
         st.warning("Please upload a dataset first in the 'Upload' section.")
 
@@ -125,8 +126,8 @@ elif st.session_state.page == 'Data Cleaning':
                     df.drop(col, axis=1, inplace=True)
                 df.interpolate(method='linear', limit_direction='both', inplace=True)
                 st.session_state.df = df
-                st.dataframe(df)
-                st.success("Data cleaned successfully!")
+            st.dataframe(df)
+            st.success("Data cleaned successfully!")
     else:
         st.warning("Please upload a dataset first.")
     
@@ -220,7 +221,7 @@ elif st.session_state.page == "Modelling":
                             continue
                     
                     st.write("Modelling Results:")
-                    results_df = pd.DataFrame(results, columns=['Model', 'Best Score', 'Best Parameters'])
+                    results_df = pd.DataFrame(results, columns=pd.Index(['Model', 'Best Score', 'Best Parameters']))
                     st.dataframe(results_df)
 
                     if best_model_obj is not None:
@@ -355,7 +356,6 @@ elif st.session_state.page == 'Monitoring':
         st.button("Back to Tracking", on_click=go_to, args=("Experiment Tracking",))
     with col2:
         st.button("Next: Interpret a Model", on_click=go_to, args=("Model Interpretation",))
-
 
 elif st.session_state.page == 'Model Interpretation':
     st.title("Model Interpretation")
