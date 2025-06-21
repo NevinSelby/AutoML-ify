@@ -3,7 +3,7 @@ import streamlit.components.v1 as components
 import plotly.express as px
 import pandas as pd
 import numpy as np
-from ydata_profiling import ProfileReport
+from pandas_profiling import ProfileReport
 import pickle
 import shap
 import matplotlib.pyplot as plt

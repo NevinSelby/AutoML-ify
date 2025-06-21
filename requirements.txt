@@ -1,13 +1,9 @@
-# Python version constraint
-python-version>=3.9,<3.13
-
-# Core dependencies
 streamlit==1.36.0
 pandas==2.2.2
 numpy==2.0.0
 plotly==5.22.0
 scikit-learn==1.5.1
-ydata-profiling==4.16.1
+pandas-profiling==3.6.3
 shap==0.46.0
 matplotlib==3.9.1
 xgboost==2.1.0
